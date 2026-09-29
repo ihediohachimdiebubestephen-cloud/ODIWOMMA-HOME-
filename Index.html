@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Odiwomma Home | We Paint More Than Walls</title>
+
+  <meta name="description" content="Odiwomma Home creates beautiful spaces through painting, wall screeding, stucco painting and decorative wall design. Based in Owerri, Imo State, serving clients nationwide.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f1e9;
+      color: #1c1c1a;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 18px 6%;
+      background: rgba(245, 241, 233, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    .menu {
+      font-size: 24px;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      padding: 150px 6% 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+      opacity: 0.65;
+    }
+
+    .hero h1 {
+      font-size: clamp(52px, 14vw, 110px);
+      line-height: 0.95;
+      letter-spacing: -4px;
+      max-width: 950px;
+      font-weight: 500;
+    }
+
+    .hero h1 span {
+      display: block;
+      font-style: italic;
+    }
+
+    .hero-text {
+      max-width: 500px;
+      margin-top: 35px;
+      font-size: 17px;
+      opacity: 0.75;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 35px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 22px;
+      border: 1px solid #1c1c1a;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    .btn-dark {
+      background: #1c1c1a;
+      color: #f5f1e9;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* INTRO */
+
+    section {
+      padding: 100px 6%;
+    }
+
+    .intro {
+      background: #1c1c1a;
+      color: #f5f1e9;
+    }
+
+    .section-number {
+      font-size: 12px;
+      letter-spacing: 2px;
+      opacity: 0.5;
+      margin-bottom: 25px;
+    }
+
+    .intro h2 {
+      font-size: clamp(38px, 9vw, 80px);
+      line-height: 1;
+      font-weight: 400;
+      max-width: 850px;
+      letter-spacing: -2px;
+    }
+
+    .intro p {
+      max-width: 600px;
+      margin-top: 35px;
+      font-size: 18px;
+      opacity: 0.75;
+    }
+
+    /* PILLARS */
+
+    .section-title {
+      font-size: clamp(40px, 9vw, 75px);
+      line-height: 1;
+      font-weight: 400;
+      letter-spacing: -2px;
+      margin-bottom: 60px;
+    }
+
+    .pillars {
+      display: grid;
+      gap: 1px;
+      background: #1c1c1a;
+    }
+
+    .pillar {
+      background: #f5f1e9;
+      padding: 45px 30px;
+      min-height: 300px;
+    }
+
+    .pillar-number {
+      font-size: 12px;
+      letter-spacing: 2px;
+      opacity: 0.5;
+    }
+
+    .pillar h3 {
+      margin-top: 80px;
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    .pillar p {
+      margin-top: 15px;
+      max-width: 400px;
+      opacity: 0.65;
+    }
+
+    /* FINISHES */
+
+    .finishes {
+      background: #e6dfd3;
+    }
+
+    .finish-list {
+      border-top: 1px solid rgba(0,0,0,0.25);
+    }
+
+    .finish {
+      padding: 25px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.25);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+    }
+
+    .finish span {
+      opacity: 0.45;
+    }
+
+    /* PROJECTS */
+
+    .projects-intro {
+      max-width: 650px;
+      font-size: 18px;
+      opacity: 0.65;
+      margin-bottom: 50px;
+    }
+
+    .project-placeholder {
+      min-height: 420px;
+      background: #d3cabc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .project-placeholder p {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.55;
+    }
+
+    /* PROCESS */
+
+    .process {
+      background: #1c1c1a;
+      color: #f5f1e9;
+    }
+
+    .process-item {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding: 30px 0;
+    }
+
+    .process-item strong {
+      display: block;
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .process-item p {
+      opacity: 0.6;
+      max-width: 500px;
+    }
+
+    /* ABOUT */
+
+    .about p {
+      max-width: 750px;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+
+    /* CTA */
+
+    .cta {
+      text-align: center;
+      background: #c6b59c;
+    }
+
+    .cta h2 {
+      font-size: clamp(45px, 11vw, 100px);
+      line-height: 0.95;
+      font-weight: 400;
+      letter-spacing: -3px;
+    }
+
+    .cta p {
+      margin: 30px auto;
+      max-width: 500px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 50px 6%;
+      background: #11110f;
+      color: #f5f1e9;
+    }
+
+    .footer-logo {
+      font-size: 20px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .footer-info {
+      margin-top: 30px;
+      opacity: 0.6;
+      font-size: 14px;
+    }
+
+    .footer-bottom {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      font-size: 12px;
+      opacity: 0.4;
+    }
+
+    /* DESKTOP */
+
+    @media (min-width: 800px) {
+
+      header {
+        padding: 25px 5%;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 35px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .hero {
+        padding-left: 8%;
+        padding-right: 8%;
+      }
+
+      section {
+        padding: 140px 8%;
+      }
+
+      .pillars {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .project-placeholder {
+        min-height: 650px;
+      }
+
+      .process-item {
+        display: grid;
+        grid-template-columns: 30% 70%;
+      }
+
+      .process-item strong {
+        font-size: 32px;
+      }
+
+      .process-item p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="#" class="logo">ODIWOMMA</a>
+
+    <div class="nav-links">
+      <a href="#work">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#finishes">Finishes</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="menu">☰</div>
+  </nav>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="eyebrow">
+    Odiwomma Home · Owerri · Nigeria
+  </div>
+
+  <h1>
+    We Paint
+    <span>More Than Walls.</span>
+  </h1>
+
+  <p class="hero-text">
+    We create homes through colour, texture and thoughtful finishing.
+    From wall screeding and painting to stucco and decorative wall design.
+  </p>
+
+  <div class="buttons">
+    <a href="#work" class="btn btn-dark">
+      Explore Our Work
+    </a>
+
+    <a href="#contact" class="btn">
+      Start A Project
+    </a>
+  </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+  <div class="section-number">01 / THE IDEA</div>
+
+  <h2>
+    A wall is only the beginning.
+  </h2>
+
+  <p>
+    At Odiwomma Home, we believe the right colour, texture and finish
+    can completely change how a space feels.
+  </p>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+  <div class="section-number">02 / WHAT WE DO</div>
+
+  <h2 class="section-title">
+    Painting.<br>
+    Design.<br>
+    Transform.
+  </h2>
+
+  <div class="pillars">
+
+    <div class="pillar">
+      <div class="pillar-number">01 — PAINTING</div>
+
+      <h3>Painting</h3>
+
+      <p>
+        Professional wall preparation, painting and finishing
+        for residential and commercial spaces.
+      </p>
+    </div>
+
+
+    <div class="pillar">
+      <div class="pillar-number">02 — DESIGN</div>
+
+      <h3>Design</h3>
+
+      <p>
+        Stucco painting and decorative wall treatments designed
+        to introduce texture, depth and character.
+      </p>
+    </div>
+
+
+    <div class="pillar">
+      <div class="pillar-number">03 — TRANSFORM</div>
+
+      <h3>Transform</h3>
+
+      <p>
+        We turn ordinary surfaces into distinctive spaces
+        through colour, texture and craftsmanship.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="work">
+
+  <div class="section-number">03 / SELECTED WORK</div>
+
+  <h2 class="section-title">
+    Spaces we've<br>
+    transformed.
+  </h2>
+
+  <p class="projects-intro">
+    A collection of painting, decorative finishing and
+    wall transformation projects by Odiwomma Home.
+  </p>
+
+  <div class="project-placeholder">
+    <p>
+      Your best project photography will appear here.
+    </p>
+  </div>
+
+</section>
+
+
+<!-- FINISHES -->
+
+<section id="finishes" class="finishes">
+
+  <div class="section-number">04 / FINISHES</div>
+
+  <h2 class="section-title">
+    Colour.<br>
+    Texture.<br>
+    Character.
+  </h2>
+
+  <div class="finish-list">
+
+    <div class="finish">
+      <strong>Silk Paint</strong>
+      <span>01</span>
+    </div>
+
+    <div class="finish">
+      <strong>Matt Emulsion</strong>
+      <span>02</span>
+    </div>
+
+    <div class="finish">
+      <strong>Emulsion Paint</strong>
+      <span>03</span>
+    </div>
+
+    <div class="finish">
+      <strong>Textcoat Paint</strong>
+      <span>04</span>
+    </div>
+
+    <div class="finish">
+      <strong>Gravitex Paint</strong>
+      <span>05</span>
+    </div>
+
+    <div class="finish">
+      <strong>Primer</strong>
+      <span>06</span>
+    </div>
+
+    <div class="finish">
+      <strong>Oil Paint</strong>
+      <span>07</span>
+    </div>
+
+    <div class="finish">
+      <strong>Potty</strong>
+      <span>08</span>
+    </div>
+
+    <div class="finish">
+      <strong>Mineral Stone Paint</strong>
+      <span>09</span>
+    </div>
+
+    <div class="finish">
+      <strong>Screeding Paint</strong>
+      <span>10</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="process">
+
+  <div class="section-number">05 / OUR PROCESS</div>
+
+  <h2 class="section-title">
+    From idea<br>
+    to finish.
+  </h2>
+
+
+  <div class="process-item">
+
+    <strong>01 — Discover</strong>
+
+    <p>
+      We understand your space, your needs and the
+      atmosphere you want to create.
+    </p>
+
+  </div>
+
+
+  <div class="process-item">
+
+    <strong>02 — Develop</strong>
+
+    <p>
+      Colours, textures and finishes are considered
+      to suit the space.
+    </p>
+
+  </div>
+
+
+  <div class="process-item">
+
+    <strong>03 — Prepare</strong>
+
+    <p>
+      Surfaces are properly prepared before the
+      finishing process begins.
+    </p>
+
+  </div>
+
+
+  <div class="process-item">
+
+    <strong>04 — Execute</strong>
+
+    <p>
+      Our team brings the selected finish to life
+      with careful execution.
+    </p>
+
+  </div>
+
+
+  <div class="process-item">
+
+    <strong>05 — Refine</strong>
+
+    <p>
+      We review the completed work and ensure
+      the final details are right.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+  <div class="section-number">06 / ABOUT ODIWOMMA</div>
+
+  <h2 class="section-title">
+    Built to transform spaces.
+  </h2>
+
+  <p>
+    Odiwomma Home was created around a simple idea:
+    the spaces we live in should feel intentional.
+    Through painting, wall screeding, stucco painting
+    and decorative wall design, we help transform
+    ordinary spaces into places with character.
+  </p>
+
+</section>
+
+
+<!-- CTA -->
+
+<section id="contact" class="cta">
+
+  <h2>
+    Ready to<br>
+    transform your space?
+  </h2>
+
+  <p>
+    Tell us what you're working on and let's
+    create something that feels like home.
+  </p>
+
+  <a href="https://wa.me/" class="btn btn-dark">
+    Start A Project
+  </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-logo">
+    ODIWOMMA HOME
+  </div>
+
+  <div class="footer-info">
+
+    <p>Owerri, Imo State, Nigeria</p>
+
+    <p>Serving clients nationwide.</p>
+
+    <p>Instagram: @Odiwomma Paint</p>
+
+    <p>Facebook: Odiwomma Paint</p>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Odiwomma Home. All rights reserved.
+  </div>
+
+</footer>
+
+</body>
+</html>
